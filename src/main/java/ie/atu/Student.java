@@ -1,9 +1,12 @@
 package ie.atu;
+import java.util.Scanner;
 
 public class Student {
     private String name;
     private String email;
     private String course;
+
+    Scanner scanner = new Scanner(System.in);
 
     public Student() {
         this.name = "";
@@ -46,6 +49,18 @@ public class Student {
     public void setCourse(String course) {
         this.course = course;
     }
+
+    public void getUserInfo(){
+        System.out.println("Enter student name: ");
+        this.name = scanner.nextLine();
+
+        System.out.println("Enter student email: ");
+        this.email = scanner.nextLine();
+
+        System.out.println("Enter student course: ");
+        this.course = scanner.nextLine();
+    }
+
 
     @Override
     public String toString() {
